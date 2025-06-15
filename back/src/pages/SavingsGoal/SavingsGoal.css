@@ -1,0 +1,48 @@
+.savings-goal-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black; /* Set text color to black */
+  background-color: white; /* Set table background color to white */
+}
+
+.savings-goal-table th, .savings-goal-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.savings-goal-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.savings-goal-table tr:nth-child(odd) {
+  background-color: white; /* Ensure odd rows have white background */
+}
+
+.savings-goal-table tr:hover {
+  background-color: #ddd;
+}
+
+.savings-goal-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer; /* Add cursor pointer */
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+}
+
+.savings-goal-table th:hover {
+  background-color: #45a049; /* Add hover effect */
+}
+
+/* Remove the unused classes */
+.sort-header,
+.sort-header:hover,
+.sort-icon {
+  display: none;
+}

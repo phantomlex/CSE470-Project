@@ -1,0 +1,243 @@
+:root {
+  /* Colors */
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --danger: #e74c3c;
+  --text: #2c3e50;
+  --border: #ddd;
+  --bg-light: #f2f2f2;
+  --bg-hover: #e8f4f8;
+  
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 8px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  
+  /* Transitions */
+  --transition: 0.2s ease-in-out;
+  
+  /* Shadows */
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+h1, h2 {
+  color: var(--text);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-container,
+.list-container {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+/* Form group wrapper */
+.form-group {
+  margin-bottom: var(--spacing-md);
+  width: 100%;
+}
+
+/* Button Styles */
+.button,
+.button-delete {
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-xs);
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.button-delete {
+  background-color: var(--danger);
+  color: white;
+}
+
+.button-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Form Elements */
+.input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-xs) 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  transition: border-color var(--transition);
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+label {
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  margin: var(--spacing-lg) 0;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+}
+
+.table th,
+.table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center; /* Add this line */
+}
+
+.table th:hover {
+  background-color: var(--primary-dark);
+}
+
+.th-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Change to center by default */
+}
+
+/* Add this new class for when sorting is active */
+.th-content.sorting {
+  justify-content: space-between;
+}
+
+.sort-indicator {
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 8px;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr {
+  transition: background-color var(--transition);
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: var(--bg-light);
+}
+
+.table tbody tr:hover {
+  background-color: var(--bg-hover);
+}
+
+.totals-container {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.total-item {
+  padding: var(--spacing-md);
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.total-item.income {
+  color: #27ae60;
+  background-color: #eafaf1;
+}
+
+.total-item.expenses {
+  color: #c0392b;
+  background-color: #fdedec;
+}
+
+.total-item.available {
+  color: #2980b9;
+  background-color: #ebf5fb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 95%;
+    padding: var(--spacing-sm);
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+  
+  .button,
+  .button-delete {
+    width: 100%;
+    margin: var(--spacing-xs) 0;
+  }
+  
+  .form-container {
+    padding: var(--spacing-md);
+  }
+  
+  .input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}
