@@ -1,4 +1,4 @@
-# MoneyMap - An Finance Management Website
+# MoneyMap - A Finance Management Website
 
 MoneyMap is a comprehensive digital platform designed to help individuals efficiently track and manage their personal finances. It provides a big-picture view of your financial health by offering tools for monitoring income, expenses, debt, and budgets. The platform empowers users to make informed financial decisions, reduce debt, and achieve savings goals through features like data visualization, budget planning, and goal-setting.
 
