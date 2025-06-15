@@ -12,7 +12,7 @@ const port = process.env.PORT || 3001;
 app.use(express.json());
 app.use(cors());
 
-const mongoURI: string = "mongodb+srv://MoneyMap:MoneyMap@moneymap.gbhf4.mongodb.net/";
+const mongoURI: string = "GENERATE YOURS";
 
 mongoose
   .connect(mongoURI)
