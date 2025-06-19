@@ -216,7 +216,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 ## Acknowledgements
 
--This project was developed for the CSE470 course.
+-This project was developed for the CSE470 course in collaboration with 3 others.
 
 -Inspired by and learned from https://www.github.com/machadop1407/financial-tracker-react
 
